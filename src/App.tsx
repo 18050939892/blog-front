@@ -9,7 +9,7 @@ function App() {
     return (
         <div className="container mx-auto">
             <header className="p-4 border-b mb-4">
-                <h1 className="text-2xl font-bold mb-4">我的博客</h1>
+                <h1 className="text-2xl font-bold mb-4">我的博客6</h1>
                 <nav className="flex gap-4">
                     <Link to="/" className="flex items-center"><Home size={16} className="mr-1" /> 首页</Link>
                     <Link to="/admin/posts" className="flex items-center"><List size={16} className="mr-1" /> 文章管理</Link>
