@@ -1,0 +1,108 @@
+.custom-swiper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.custom-swiper-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.custom-swiper-slide {
+    flex-shrink: 0!important;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-swiper-button-prev,
+.custom-swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.custom-swiper-button-prev:hover,
+.custom-swiper-button-next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.custom-swiper-button-prev {
+    left: 10px;
+}
+
+.custom-swiper-button-next {
+    right: 10px;
+}
+
+.custom-swiper-button-prev:disabled,
+.custom-swiper-button-next:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+.swiper-container-bottom-number {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.swiper-container-bottom {
+    background-color: gray;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    height: 5px;
+
+    > div {
+        float: left;
+        background: blue;
+        height: 5px;
+
+    }
+}
+.swiper-container-bottom-circle {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    > .buttom-circle {
+        margin-bottom: 10px;
+        margin-left: 10px;
+        float: left;
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50% 50% 50% 50%;
+        background-color: gray;
+        text-align: center;
+    }
+
+    /*> .pagination-custom-n {*/
+    /*    width: 20px;*/
+    /*    height: 20px;*/
+    /*}*/
+
+    .check-circle {
+        background-color: blue;
+    }
+}

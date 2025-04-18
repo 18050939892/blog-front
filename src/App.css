@@ -1,42 +1,35 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
 }
+header {
+    display: block;
+    width:calc(100% - 130px) ;
+    background: #eee;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    border-bottom: 2px solid black;
+    position: fixed;
+    top: 0;
+    padding-left:130px ;
+    z-index: 1000;
+    >nav>a {
+        padding: 10px;
+        text-decoration: none;
+        color: black;
+      >svg{
+          margin-top: 6px;
+          margin-bottom: -6px;
+      }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+    }
+    >nav>a:nth-child(4) {
+        position: absolute;
+        right: 10px;
+        top: -10px;
+    }
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+main{
+    margin-top: 41px;
 }

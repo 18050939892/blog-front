@@ -1,0 +1,73 @@
+.comment-total {
+    width: 100%;
+    display: flex;
+    background-size: cover;
+    flex-wrap: wrap;
+    position: relative;
+    .cover{
+        position: fixed;
+        z-index: -1;
+        top: 40.8px;
+        left: 0;
+        width: 100%;
+        background-image: url("../../assets/img_2.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .comments-show {
+        width: 100%;
+        > .post-content {
+            width: 85%;
+            //height: 500px;
+            border: 5px solid black;
+            border-radius: 10px 10px;
+            margin-left: 20px;
+            background-color: white;
+        }
+    }
+
+    .comment-input {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        .comment-content {
+            width: 85%;
+            //height: 300px;
+            border: 5px solid black;
+            border-radius: 10px 10px;
+            margin-top: 30px;
+            background-color: white;
+            margin-left: 20px;
+            margin-bottom: 20px;
+
+            > div {
+                font-size: 20px;
+            }
+            > p{
+                padding: 10px 0;
+            }
+        }
+
+        > .input-f {
+            width: 45%;
+            margin-left: 20px;
+        }
+        >button{
+            position: absolute;
+            left: 46.4%;
+            width: 110px;
+            height: 50px;
+            font-size: 16px;
+            line-height: 50px;
+            padding-left: 30px;
+            bottom: 0;
+            border: 1px solid black;
+            border-radius: 10px 10px;
+            //margin-left: 20px;
+        }
+        >button:active{
+            background-color: gray;
+        }
+    }
+}

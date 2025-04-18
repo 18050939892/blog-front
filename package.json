@@ -12,6 +12,8 @@
   "dependencies": {
     "@uiw/react-md-editor": "^4.0.5",
     "axios": "^1.8.4",
+    "jotai": "^2.12.3",
+    "less": "^4.3.0",
     "lucide-react": "^0.488.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

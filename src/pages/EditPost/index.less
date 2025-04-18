@@ -1,0 +1,42 @@
+.write-page {
+    width: 100%;
+    position: relative;
+    .back-write{
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        background-image: url('https://bpic.51yuansu.com/backgd/cover/00/37/18/5bdce74c74e0d.jpg?x-oss-process=image/resize,h_360,m_lfit/sharpen,100');
+        background-repeat: no-repeat;
+        background-size: cover;
+        transform: rotateY(180deg);
+    }
+    .aside-right {
+        position: absolute;
+        right: 0;
+        width: 50%;
+        >input{
+            width: 60%;
+            height: 60px;
+            font-size: 30px;
+             text-align: center;
+            margin: 15% -50% 5% 50%;
+            transform: translate(-50%,-50%);
+            border: 20px solid transparent;
+            outline: none;
+            mix-blend-mode: multiply;
+            border-image: url("../../assets/input.jpeg") 50 stretch;
+        }
+        >button{
+            margin-top: 8%;
+            margin-left: 50%;
+            transform: translate(-50%,-50%);
+            width: 120px;
+            height: 50px;
+            font-size: 18px;
+            display: flex;
+            line-height: 50px;
+            padding-left: 5px;
+            mix-blend-mode: multiply;
+        }
+    }
+}
