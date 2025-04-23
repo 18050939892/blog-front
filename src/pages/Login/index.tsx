@@ -1,16 +1,17 @@
 import { useEffect, useState } from 'react'
 import api from '../../api'
 import './index.less'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import treeImage from '../../assets/tree.jpg'
-import { useLocation } from 'react-router-dom'
+
 interface Props {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
     setIsLoggedIn: Function
 }
-export default function Index(props:Props) {
+
+export default function Index(props: Props) {
     const [, setPosts] = useState([])
-    const {setIsLoggedIn} =props;
+    const {setIsLoggedIn} = props
     const navigate = useNavigate()
     useEffect(() => {
         const fetchPosts = async () => {
@@ -20,13 +21,13 @@ export default function Index(props:Props) {
         fetchPosts()
     }, [])
     
-    const [isAnimated, setIsAnimated] = useState(false);
-    const location = useLocation();
+    const [isAnimated, setIsAnimated] = useState(false)
+    const location = useLocation()
     
     useEffect(() => {
-        setIsAnimated(false);
-        setTimeout(() => setIsAnimated(true),50);
-    }, [location.pathname]);
+        setIsAnimated(false)
+        setTimeout(() => setIsAnimated(true), 50)
+    }, [location.pathname])
     
     return (
         <div className="Login">
@@ -66,6 +67,9 @@ export default function Index(props:Props) {
         </div>
     )
 }
-{/*<button onClick={async ()=>{*/}
-{/*    await api.post(`/auth/register`, { username: 'lzj', password: 'abc', email:'225@qq.com' });*/}
-{/*}}>临时注册</button>*/}
+{/*<button onClick={async ()=>{*/
+}
+{/*    await api.post(`/auth/register`, { username: 'lzj', password: 'abc', email:'225@qq.com' });*/
+}
+{/*}}>临时注册</button>*/
+}
