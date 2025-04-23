@@ -4,8 +4,12 @@ import api from '../../api'
 import Editor from '../../components/Editor.tsx'
 import { Save } from 'lucide-react'
 import './index.less'
-export default function PostDetail() {
+interface   Props {
+    isLoggedIn:boolean
+}
+export default function PostDetail(props:Props) {
     const {id} = useParams()
+    const {isLoggedIn} =props
     const [post, setPost] = useState<{
         title: string,
         content: string,
@@ -23,7 +27,7 @@ export default function PostDetail() {
     }, [id])
     const savePost = async () => {
         
-        await api.put(`/posts/comment`, {username: id ? 'user' : 'visitor', content, id}).then((res) => {
+        await api.put(`/posts/comment`, {username: !isLoggedIn ? 'user' : 'visitor', content, id}).then((res) => {
             console.log(res.data)
         })
         fetchPost()

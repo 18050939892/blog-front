@@ -30,7 +30,7 @@ function App() {
             <main >
                 <Routes>
                     <Route path="/" element={<HomePage />} />
-                    <Route path="/post/:id" element={<PostDetail />} />
+                    <Route path="/post/:id" element={<PostDetail isLoggedIn={isLoggedIn} />} />
                     <Route path="/admin/posts" element={<PostsList />} />
                     <Route path="/admin/new" element={<EditPost />} />
                     <Route path="/admin/edit/:id" element={<EditPost />} />
